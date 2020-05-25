@@ -1,0 +1,304 @@
+body{
+    background-image:url("books.jpeg")  ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: auto;
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,10,10,0.2);
+    margin-left: -10px;
+    margin-top:-8px;
+}
+.navigate_shadow{
+    position: fixed;
+    border: 0px;
+    background: rgba(10,10,10,0.9);
+    width: 100%;
+    height: 0%;
+    margin-top:-8px;
+    margin-left: -8px;
+    box-shadow: 0px 0px 50px 30px black;
+}
+.navigate{
+    width: 100%;
+    height: 12%;
+    min-width: 100%;  
+    color: white;
+    position: fixed;
+    margin-top: -5px;
+    margin-left: -8px;
+    display: flex;
+}
+.navigate .title{
+    position: absolute;
+    margin-left: 5%;   
+    margin-top: 10px;
+}
+.navigate .title h1{
+    font-size: 44px;
+    text-shadow: 1px 4px black;
+}
+.container{
+    border: white solid 1px;
+    background: #43425D;
+    color:white;
+    position: fixed;
+    padding: 10px 20px;
+    width: 250px;
+    height: 300px;
+    margin-left: 70%;
+    margin-top: 13%;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: visible;
+}
+.Wmsu_logo{
+    background-image: url("wmsu.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: inherit;
+    width:110px;
+    height: 110px;
+    margin-top: -60px;
+    margin-left: 70px;
+    border-radius: 100%;
+}
+.container .header{
+    margin-top: 28%;
+    margin-left: 50%;
+    transform:translate(-50%,0%);
+}
+
+.form{
+    margin-top:5%;
+    margin-left:-15px;
+}
+.textbox{
+    margin-top:20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.textbox i{
+    position: absolute;
+    margin-top: 23px;
+}
+.textbox input{
+    color: white;
+    padding: 5px 25px;
+    outline: none;
+}
+.textbox input:focus{
+    background: transparent;
+    border-bottom:1px solid #3B86FF;
+}
+.form-control{
+    border: none;
+    border-bottom:1px solid white;
+    background-color: transparent;
+    font-size: 16px;
+    margin-top:20px;
+}
+.btn {
+    margin-top: 8%;
+    margin-left: 60%;
+    
+}
+.btn button{
+    background-color: white;
+    color: #43425D;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+.btn button:hover{
+    background: #34495e;
+    color: white;
+    transition-duration: .2s;
+}
+.footer{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    margin-top:47.7%;
+    margin-left:-8px;
+    border:none;
+}
+.footer ul{
+    display: inline-block;
+    float: left;
+    transform: scale(1.3,1.3);
+    margin-left:-30px;
+}
+.footer li{
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+.footer li i{
+    padding-left: -20px;
+    margin-left: 20px;
+    color: white;
+    margin-right: 5px;
+    float: left;
+    z-index: 10;
+}
+.footer .footer-shadow{
+    width: 100%;
+    height:1px;
+    box-shadow: 0px 30px 50px 20px rgba(10,10,10,0.8);
+}
+.container-goals{
+    position: absolute;
+    background:rgba(90,90,90,0.5);
+    color: white;
+    width: 250px;
+    height: 150px;
+    padding: 10px 20px;
+    margin-top:14%;
+    margin-left: 40%;
+    font-weight: 200;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: 1px 1px 15px 0px white;
+}
+.container-goals:hover{
+    border: 1px solid white;
+    transform: scale(1.2,1.2);
+    transition-duration:0.5s;
+}
+.container-goals h2{
+    margin-top: 2px;
+    margin-left:55%;
+    transform: translate(-50%,0%);
+}
+
+.container-Mission{
+    position: absolute;
+    background:rgba(90,90,90,0.5);
+    color: white;
+    width: 300px;
+    height: 200px;
+    padding: 10px 20px;
+    margin-top:28%;
+    margin-left: 13%;
+    font-weight: 200;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: 1px 1px 20px 0px white;
+    z-index: 9;
+}
+.container-Mission:hover{
+    border: 1px solid white;
+    transform: scale(1.2,1.2);
+    transition-duration:0.5s;
+}
+.content-header{
+    margin-top: 2px;
+    margin-left:55%;
+    transform: translate(-50%,0%);
+}
+
+.container-Vision{
+    position: absolute;
+    background:rgba(90,90,90,0.5);
+    color: white;
+    width: 300px;
+    height: 120px;
+    padding: 10px 20px;
+    margin-top:11%;
+    margin-left: 5%;
+    font-weight: 200;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: 1px 1px 20px 0px white;
+    z-index: 8;
+}
+.container-Vision:hover{
+    border: 1px solid white;
+    transform: scale(1.2,1.2);
+    transition-duration:0.5s;
+}
+@media screen and (max-width:1360px){
+    .navigate{
+        width: 100%;
+    }
+}
+@media screen and (max-width:820px){
+    .navigate{
+        color: white;
+        background: rgba(10,10,10,0.3);
+        width: 100%;
+        align-items: center;
+        z-index: 13;
+    }
+    .title h1{
+        color: white;
+        font-size: 22px;
+        text-align: center;
+    }
+    .container{
+        position: absolute;
+        margin-top:20%;
+        margin-left:50%;
+        transform: translate(-50%,0%);
+    }
+    .container-Vision{
+        margin-top:85%;
+        margin-left:50%;
+        transform: translate(-50%,0%);
+    }
+    .container-Mission{
+        margin-top:115%;
+        margin-left:50%;
+        transform: translate(-50%,0%);
+    }
+    .container-goals{
+        margin-top: 155%;
+        margin-left:50%;
+        transform: translate(-50%,0%);
+    }
+    .footer{
+        z-index: 12;
+    }
+    .footer .content{
+        margin-top:-4%;
+    }
+}
+@media screen and (max-width:460px){    
+
+    .navigate{
+        color: white;
+        background: rgba(10,10,10,0.3);
+        width: 100%;
+        height: 300px;
+        align-items: center;
+        z-index: 13;
+    }
+    .title h1{
+        font-size: 18px;
+    }
+    .container{
+        margin-top: 80%;
+    }
+    .container-Vision{
+        margin-top: 170%;
+    }
+    .container-Mission{
+        margin-top: 210%;
+    }
+    .container-goals{
+        margin-top: 270%;
+    }
+    .footer{
+        top:84%;
+    }
+}

@@ -1,0 +1,43 @@
+* Log in ( Admin & User )
+  > Username and Password
+  > Verification
+  > Input Validation
+
+* New Student ( User )
+  > Student information
+  > Parents information
+  > Guardian information 
+  > Validate for duplication
+  > Input Validation
+
+* Add Grade ( User )
+  > Student list per section
+  > Add Grades
+  > Update Grades
+  > Search Student by Name
+* Student list
+  > List of Student per section
+  > Search Student
+  > Update Student profile
+  > View Student Information
+  > View Student Parent or Guardian
+  > Archive Student Record ( for graduating student )
+
+* Allumni ( Admin )
+  > List of Graduate student
+  > Search list of allumnus by batch
+  > Search student by name
+  > View Student Record
+  > Print Student Form 137
+
+* Request ( Admin )
+  > View list of record request
+  > View Allumni
+  > Forward Student record ( respond to Request )
+  > Declined Request
+
+* Subject
+  > Add Subject Information
+  > View Subject list
+  > Remove Subject
+  > update Subject

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wmsuelementarysite"
+  },
+  "targets": {
+    "wmsuelementarysite": {
+      "hosting": {
+        "mainsite": [
+          "wmsuelementarymainsite"
+        ]
+      }
+    }
+  }
+}

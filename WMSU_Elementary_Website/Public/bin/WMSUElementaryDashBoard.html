@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge<title>DashBoard"/> 
+        <title>WMSU Elementary Hompage</title>
+        <script defer="" src="Dashboard.js"></script>
+        <link rel="stylesheet" type="text/css" href="fontawesome-free-5.12.0-web\css\all.css">
+        <link rel="stylesheet" type="text/css" href="Homepage.css">
+        <script defer="" src="https://kit.fontawesome.com/b99e67b6e.js"></script>
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <img src="wissen.png" width=190 height=100 id="company-logo">
+                <div class="pone-linya"></div>
+                <ul>
+                    <li id="NewStudent"><a><i class="fas fa-user"></i>New Student</a></li>
+                    <li id="AddStudentGrade"><a><i class="fas fa-user-graduate"></i>Add Grades</a></li>
+                    <li id="StudentList"><a><i class="fas fa-users"></i>Student List</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="myAccount-data">
+        	<nav class="myAccount-navigation">
+        		<ul>
+        			<li>Tristan jay L Amit
+        				<ul>
+        					<li id="logout">Log out</li>
+        				</ul>
+        			</li>
+        		</ul>
+        	</nav>
+        	<img src="">
+        </div>
+        <div class="school-info">            
+            <img src="wmsu.png" width=120px height=120px>
+                <div class="schoolname">
+                    <h1>Western Mindanao State University</h1>
+                    <div class="divition"></div>
+                    <i><h3>Un Universidad, Un Familia, Un Amor</h3></i>
+                </div>
+        </div>
+
+        <div class="horizontalDesign">
+            <h2>OVERVIEW</h2>
+        </div>
+            
+         <div class="Overlay"></div>
+        	<div class="NewStudent-Container">
+
+        		<div class="Student-header">
+		            <img src="wmsu.png" width=100px height=100px>
+        			<div class="line"></div>
+        			<h2 id="close">&times;</h2>
+        		</div>
+        		<div class="content">
+        			<h1>STUDENT INFORMATION</h1>
+        			<div class='student-lrn'>
+        				LRN : <input type="number" maxlength="12" min="0">
+        			</div>
+        			<div class="components">
+        				<div class="first-row">
+        						Name :
+        						<div class="txtbox">
+        							<input type="text" maxlength="30" id="sur-name" placeholder="Sur name..">
+        						</div>
+        						<div class="txtbox">
+        							<input type="text" maxlength="30"  id="given-name" placeholder="Given name..">
+        						</div>
+        						<div class="txtbox">
+        							<input type="text" maxlength="30" id="middle-name" placeholder="Middle name..">
+        						</div>
+        						<div class="txtbox" id="gradebox">
+        							Grade :
+        							<input type="number" maxlength="6" id="grade" placeholder="Grade .." min="0" max="6" >
+        						</div>		
+        				</div>
+        				<div class="second-row">
+        						<div class="txtbox" id="gender">
+        							Sex :<input type="text" maxlength="30" id="sex">
+        						</div>
+        						<div class="txtbox" id="birth">
+        						 	Date of Birth :<input type="Date" maxlength="30" id="date-of-birth" >
+        						</div>
+        						<div class="txtbox" id="place">
+        						 	Place of Birth : <input type="text" maxlength="30" id="place-of-birth">
+        						</div>
+        				</div>
+        				<div class="third-row">
+        						<div class="txtbox" id="relig">
+        							Religion :
+        							<input type="text" maxlength="30" id="religion">
+        						</div>
+        						<div class="txtbox" id="address">
+        							Address :
+        							<input type="text" maxlength="60" id="addr">
+        						</div>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="father-information">
+        			<h1>FATHER INFORMATION</h1>
+
+        			<div class="contents">
+        				<div class="txtbox">
+        					Name : <input type="text" id="F-name">	
+        				</div>
+        				<div class="txtbox">
+        					Occupation : <input type="text" id="occupation">	
+        				</div>
+        				<div class="txtbox">
+        					Office : <input type="text" id="office">	
+        				</div>
+        				<div class="txtbox">
+        					Contact #: <input type="text" id="contact">	
+        				</div>
+        			</div>
+        		</div>
+        		<div class="mother-information">
+        			<h1>MOTHER INFORMATION</h1>
+
+        			<div class="contents">
+        				<div class="txtbox">
+        					Name : <input type="text" id="M-name">	
+        				</div>
+        				<div class="txtbox">
+        					Occupation : <input type="text" id="occupation">	
+        				</div>
+        				<div class="txtbox">
+        					Office : <input type="text" id="office">	
+        				</div>
+        				<div class="txtbox">
+        					Contact #: <input type="text" id="contact">	
+        				</div>
+        			</div>
+        		</div>
+        		<div class="guardian-information">
+        			<h1>GUARDIAN INFORMATION</h1>
+
+        			<div class="contents">
+        				<div class="txtbox">
+        					Name : <input type="text" id="G-name">	
+        				</div>
+        				<div class="txtbox">
+        					Occupation : <input type="text" id="occupation">	
+        				</div>
+        				<div class="txtbox">
+        					Office : <input type="text" id="office">	
+        				</div>
+        				<div class="txtbox">
+        					Contact #: <input type="text" id="contact">	
+        				</div>
+        			</div>
+        		</div>
+        		<div class="incase-of-emergency">
+        			<h1>INCASE OF EMERGENCY</h1>
+        			<div class="ioe-Content"> 
+        				<label for="emerg">Contact :</label>
+        				<select id="emerg">
+
+        				</select>
+        			</div>
+        			<div class="info">
+        				Please select a person in which the school will contact incase of emergency.
+        			</div>
+        		</div>
+        		<div class="Student-footer" id="Student-Profiling">
+        			<button id="Back-info">Back</button>
+        			<button id="Next-info">Next</button>
+        		</div>
+        	</div>
+
+        	<div class="grade-Container">
+        		<div class="grade-header">
+        			<h3 id="close-grade">&times;</h3>
+        		</div>
+        		<div class="grade-content">
+                    <!-- !-->
+                    <div class="main">
+                        <div class="left-body">
+                            <i class="fas fa-search" id="s-icon"> <input type="text" placeholder="      Search"></i>
+                            <div class="list-body">
+                                <ul class="list-of-student">
+                                    <li id="mae"><h3 id="Cabrera">Maegan Louise Cabrera</h3><i class="fas fa-edit"></i></li>
+                                    <li id="mae"><h3 id="Cabrera">Jessa Lanzaderas Natividad</h3><i class="fas fa-edit"></i></li>
+                                    <li id="mae"><h3 id="Cabrera">Critie Ejersito</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>Roger John Buela</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>Mus Mus Musa</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>John peter Dolar</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>Dragon Knight Tadus</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>Shune meal bee</h3><i class="fas fa-edit"></i></li>
+                                    <li><h3>Tristan jay Amit</h3><i class="fas fa-edit"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-body">
+                            <div class="register-grade">
+                              <div class="register-header">
+                                 <img src="wmsu.png" width=120px height=120px>
+                                 <div class="description-box">
+                                     <h3>WESTERN MINDANAO STATE UNIVERSITY</h3>
+                                     <h5>College of Teacher Education</h5>
+                                     <h5>Integrated Laboratory School</h5>
+                                     <h3 id="department">ELEMENTARY DEPARTMENT</h3>
+                                     <h5 id="city">Zamboanga City</h5>
+                                 </div>
+                             </div>
+                            <div class="Profile-name">
+                                    <div class="profile">
+                                        Name : <input type="text" value="" id="student-name">
+                                    </div>
+                                    <table  border="solid">
+                                        <tr>
+                                            <th rowspan="2" width="150px">Learning Areas</th>
+                                            <th colspan="4" width="200px">QUARTER</th>
+                                            <th rowspan="2"  width="100px">FINAL GRADE</th>
+                                            <th rowspan="2" width="150px">REMARKS</th>
+                                        </tr>
+                                        <tr cols=4>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Filipino</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>English</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Araling Panlipunan</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Edukasyon sa Pagkatao</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mother Tongue</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MAPEH</td>
+                                            <td width="50px">90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">GENERAL AVERAGE </td>
+                                            <td>90</td>
+                                            <td>PASSED</td>
+                                        </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+        		</div>
+        		<div class="grade-footer"> </div>
+        	</div>
+
+        	<div class="list-Container">
+        		<div class="list-header">
+        			<h3 id="close-list">&times;</h3>
+        		</div>
+        		<div class="list-content">
+                    <div class="student-list">
+                        <div class="search-content">
+                            <h2>STUDENT LIST</h2>
+                            <i class="fas fa-search"><input type="search" placeholder="Search .."></i>
+                        </div>
+                        <div class="records">
+                            <ul class="list-of-student">
+                                <li><img src="profile\Harun.jpg"><h4>Joseph Harun</h4><span>Mobile : 091-7777-777</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\buela.jpg"><h4>Roger John Buela</h4><span>Mobile : 091-4444-444</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\musa.jpg"><h4>Mus Mus Musa</h4><span>Mobile : 091-5555-555</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\jessa.jpg"><h4>Jessa Lanzaderas Natividad</h4><span>Mobile : 091-2222-222</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\cris.jpg"><h4>Critie Ejersito</h4><span>Mobile : 091-3333-333</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\pete.jpg"><h4>John peter Dolar</h4><span>Mobile : 091-6666-666</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\tadus.jpg"><h4>Dragon Knight Tadus</h4><span>Mobile : 091-8888-888</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\mae.jpg"><h4>Maegan Louise Cabrera</h4><span>Mobile : 091-0111-111</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\shune.jpg"><h4>Shune meal bee</h4><span>Mobile : 091-9999-999</span><i class="fas fa-edit"></i></li>
+                                <li><img src="profile\tjay.jpg"><h4>Tristan jay Amit</h4><span>Mobile : 091-2121-212</span><i class="fas fa-edit"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+        		</div>
+        		<div class="list-footer"> </div>
+        	</div>
+            
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="/__/firebase/7.9.1/firebase-app.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script defer src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+            <script defer src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+            <script defer src="./init-firebase.js"></script>
+            <!-- Initialize Firebase -->
+            <script src="/__/firebase/init.js"></script>
+    </body>
+</html>

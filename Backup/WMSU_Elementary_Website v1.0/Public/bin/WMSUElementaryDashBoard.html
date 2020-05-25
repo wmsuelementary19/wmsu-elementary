@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge<title>DashBoard"/> 
+        <title>WMSU Elementary Hompage</title>
+        <script defer="" src="Dashboard.js"></script>
+        <link rel="stylesheet" type="text/css" href="fontawesome-free-5.12.0-web\css\all.css">
+        <link rel="stylesheet" type="text/css" href="Homepage.css">
+        <script defer="" src="https://kit.fontawesome.com/b99e67b6e.js"></script>
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <img src="wissen.png" width=190 height=100 id="company-logo">
+                <div class="pone-linya"></div>
+                <ul>
+                    <li id="NewStudent"><a><i class="fas fa-user"></i>New Student</a></li>
+                    <li id="AddStudentGrade"><a><i class="fas fa-user-graduate"></i>Add Student Grades</a></li>
+                    <li id="Subject"><a><i class="fas fa-book"></i>Subject</a></li>
+                    <li id="StudentList"><a><i class="fas fa-users"></i>Student List</a></li>
+                    <li id="Allumni"><a><i class="fas fa-graduation-cap"></i>Allumni</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="school-info">            
+            <img src="wmsu.png" width=120px height=120px>
+                <div class="schoolname">
+                    <h1>Western Mindanao State University</h1>
+                    <div class="divition"></div>
+                    <i><h3>Un Universidad, Un Familia, Un Amor</h3></i>
+                </div>
+        </div>
+
+        <div class="horizontalDesign">
+            <h2>OVERVIEW</h2>
+        </div>
+            
+        	<div class="NewStudent-Container">
+
+        		<div class="Student-header">
+		            <img src="wmsu.png" width=100px height=100px>
+        			<div class="line"></div>
+        			<h2 id="close">&times;</h2>
+        		</div>
+        		<div class="Student-content" id="Student-Profiling">
+        			<h1 id="Info-Description">STUDENT NAME</h1>
+        			<div class="Textbox" >
+        				<input type="text" id="Sur-Name" placeholder="Sur name">
+        			</div>        		        			
+        			<div class="Textbox" >
+        				<input type="text" id="Given-Name" placeholder="Given name">
+        			</div>	
+        			<div class="Textbox" >
+        				<input type="text" id="Middle-Name" placeholder="Middle name">
+        			</div>
+        		</div>
+         		<div class="Grade-Level" id="Student-Profiling">
+        			<h1 id="Info-Description">GRADE LEVEL<h1>
+       				<input type="text" id="Student-Grade" placeholder="Grade level ..">
+         		</div>
+         		<div class="Student-Sex" id="Student-Profiling">
+        			<h1 id="Info-Description">STUDENT GENDER<h1>
+       				<input type="text" id="Student-Sex" placeholder="Student Gender ..">
+         		</div>
+                <div class="Date-Of-Birth" id="Student-Profiling">
+                    <h1 id="Info-Description">DATE OF BIRTH<h1>
+                    <input type="Date" id="Birth" placeholder="Date of birth ..">
+                </div>
+                <div class="Place-Of-Birth" id="Student-Profiling">
+                    <h1 id="Info-Description">PLACE OF BIRTH<h1>
+                    <input type="text" id="Place-Birth" placeholder="Place of birth ..">
+                </div>
+                <div class="Religion" id="Student-Profiling">
+                    <h1 id="Info-Description">RELIGION<h1>
+                    <input type="text" id="religion" placeholder="Religion ..">
+                </div>
+                <div class="Address" id="Student-Profiling">
+                    <h1 id="Info-Description">ADDRESS<h1>
+                    <input type="text" id="address" placeholder="Address ..">
+                </div>
+
+
+                <!--- FATHERS CONTENT!-->
+                <div class="Father-Name" id="Student-Profiling">
+                    <h1 id="Info-Description">FATHER NAME<h1>
+                    <input type="text" id="father-name" placeholder="Name ..">
+                </div>
+                <div class="Father-Occupation" id="Student-Profiling">
+                    <h1 id="Info-Description">OCCUPATION<h1>
+                    <input type="text" id="father-occupation" placeholder="Occupation ..">
+                </div>
+                <div class="Father-Office" id="Student-Profiling">
+                    <h1 id="Info-Description">OFFICE<h1>
+                    <input type="text" id="father-office" placeholder="Office ..">
+                </div>
+                <div class="Father-Contact-Info" id="Student-Profiling">
+                    <h1 id="Info-Description">CONTACT INFORMATION
+
+                        <h1>
+                    <input type="text" id="father-contact-info" placeholder="Contact information ..">
+                </div>
+
+                <!--- MOTHERS CONTENT!-->
+                <div class="Mother-Name" id="Student-Profiling">
+                    <h1 id="Info-Description">MOTHER NAME<h1>
+                    <input type="text" id="mother-name" placeholder="Name ..">
+                </div>
+                <div class="Mother-Occupation" id="Student-Profiling">
+                    <h1 id="Info-Description">OCCUPATION<h1>
+                    <input type="text" id="mother-occupation" placeholder="Occupation ..">
+                </div>
+                <div class="Mother-Office" id="Student-Profiling">
+                    <h1 id="Info-Description">OFFICE<h1>
+                    <input type="text" id="mother-office" placeholder="Office ..">
+                </div>
+                <div class="Mother-Contact-Info" id="Student-Profiling">
+                    <h1 id="Info-Description">CONTACT INFORMATION<h1>
+                    <input type="text" id="mother-contact-info" placeholder="Contact information ..">
+                </div>
+                <!--- GUARDIAN CONTENT!-->
+                <div class="Guardian-Name" id="Student-Profiling">
+                    <h1 id="Info-Description">GUARDIAN NAME<h1>
+                    <input type="text" id="guardian-name" placeholder="Name ..">
+                </div>
+                <div class="Guardian-Occupation" id="Student-Profiling">
+                    <h1 id="Info-Description">OCCUPATION<h1>
+                    <input type="text" id="guardian-occupation" placeholder="Occupation ..">
+                </div>
+                <div class="Guardian-Office" id="Student-Profiling">
+                    <h1 id="Info-Description">OFFICE<h1>
+                    <input type="text" id="guardian-office" placeholder="Office ..">
+                </div>
+                <div class="Guardian-Contact-Info" id="Student-Profiling">
+                    <h1 id="Info-Description">CONTACT INFORMATION<h1>
+                    <input type="text" id="guardian-contact-info" placeholder="Contact information ..">
+                </div>
+        		<div class="Student-footer" id="Student-Profiling">
+        			<button id="Back-info">Back</button>
+        			<button id="Next-info">Next</button>
+        		</div>
+        	</div>
+
+            <div class="Student-Grade-Container">
+                <div class="content">
+                    <div class="Student-header">
+                        <h2 id="closed">&times;</h2>
+                    </div>
+                    <div class="grid-Container">
+                        <div class="item">
+                            <div class="profile">
+                            </div>
+                        </div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Subject-Container">
+                <div class="content">
+                    <div class="Student-header">
+                        <h2 id="subject-closed">&times;</h2>
+                    </div>
+                    <h2>RECORD OF SUBJECT</h2>
+                </div>
+            </div>
+
+            <div class="Student-list-Container">
+                <div class="content">
+                    <div class="Student-header">
+                        <h2 id="list-closed">&times;</h2>
+                    </div>
+                    <h2>STUDENT LIST</h2>
+                </div>
+            </div>
+
+            <div class="Allumni-list-Container">
+                <div class="content">
+                    <div class="Student-header">
+                        <h2 id="A-list-closed">&times;</h2>
+                    </div>
+                    <h2>ALLUMNI</h2>
+                </div>
+            </div>
+    </body>
+</html>

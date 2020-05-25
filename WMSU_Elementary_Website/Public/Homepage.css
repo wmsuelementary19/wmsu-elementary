@@ -1,0 +1,1600 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'josefin Sans', sans-serif
+}
+body{
+    background: #f3f5f9;
+}
+#company-logo{
+    margin-top: -20px;
+    margin-left:-14px;
+}
+/**WEBSITE NAVIGATION AND DESIGN**/
+.wrapper{
+    display: flex;
+    position: relative;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 105%;
+    background: #43425D;
+    padding: 30px 20px;
+    z-index: 2;
+}
+.wrapper .sidebar h2{
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapper .sidebar ul{
+    margin-top:40px;
+}
+.wrapper .sidebar ul li{
+    padding: 20px 10px;
+    margin-left: -18px;
+    margin-right: -20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+    cursor:pointer;
+}
+.wrapper .sidebar ul li a{
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+    margin-left: 10px;
+}
+.wrapper .sidebar ul li:hover{
+    background: #594f8d;
+}
+.wrapper .sidebar ul li:hover a{
+    color: #fff;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height:  94.2%;
+    margin-left:190px;
+    overflow:hidden;
+}
+.sidebar-line{
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-bottom: 63px;
+    width: 180px;
+    border: 1px solid #E6E6E6;
+}
+.header .header_myAccount{
+    position: relative;
+    color: #444;
+    width: 86.5%;
+    height:40px;
+    display: flex;
+    margin-top: 10px;
+    border:none;
+    border-bottom: solid 1px #444;
+}
+.header .header_myAccount .notification{    
+    width: 20px;
+    height: 18px;
+    border:none;
+    border-right: 1px solid #444;
+}
+.header .header_myAccount #header_user_pict{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin-top: 3px;
+    margin-right: 5%;
+    border-radius: 100%;
+}
+.header .header_myAccount nav{
+    position: relative;
+    width:230px;
+    height: 30px;
+    text-align: center;
+    top: 20%;
+    margin-left: 85%;
+    transform: translateX(-50%);
+}
+.header_myAccount nav ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    padding: 2px 2px;
+}
+.header_myAccount .header_myAccount_nav ul li{
+    height: 20px;
+    cursor: pointer;
+}
+.header_myAccount nav ul li ul{
+    display: none;
+    background: silver;
+    color: white;
+    border:solid 1px white;
+}
+.header_myAccount nav ul li:hover{
+    color:#43425D;
+}
+#header_wmsulogo{
+    position: absolute;
+    margin-top:10px; 
+    margin-left: 10%;
+    transform: translateX(-50%);
+}
+.header .header_school_data{
+    font-weight:100;
+    margin-top: 30px;
+    margin-left: 45%;
+    margin-right: 20px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color:black;
+    opacity: 70%;
+}
+.header_school_data .header_design_line{
+    background: black;
+    opacity: 70%;
+    width: 100%;
+    height: 1px;
+    margin-top: 2px;
+    margin-right: 50px;
+}
+.header_school_data h3{
+    font-size: 16px;
+    margin-top:5px;
+    margin-right:50px;
+}
+.header .header_bar_design{
+    position: relative;
+    float: right;
+    background: #43425D;
+    width: 100%;
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 40%;
+    transform: translateX(-9%);
+}
+.header .header_bar_design h2{
+    font-size: 24px;
+    font-weight: lighter;
+    font-feature-settings: normal;
+    color: white ;
+    margin-top: 20px;
+    margin-left: 43.3%;
+    transform: translateX(-50%);
+}
+/** New Student Content **/
+.Overlay{
+    position: fixed;
+    background: rgba(10,10,10,.2);
+    width:100%;
+    height: 100%;
+    margin-left: 0px;
+    display:none;
+    z-index: 19;
+}
+#newstudent{
+    position: fixed;
+    background: #E6E6E6;
+    width:800px;
+    height:500px;
+    margin-top:25%;
+    margin-left:50%;
+    transform: translate(-50%,-50%);
+    border:1px solid #3B86FF;
+    box-shadow: 0px 0px 10px 5px #eee;
+    overflow: hidden;
+    display:none;
+    z-index: 20;
+}
+.newstudent_header{
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    display: flex;
+}
+.newstudent_header #newstudent_header_wmsulogo{
+    margin-top:10px;
+    margin-left:10px;
+}
+.newstudent_header .newstudent_header_line{
+    position: absolute;
+    width:68%;
+    height: 2px;
+    background: gray;
+    margin-top: 65px;
+    margin-left: 130px;
+}
+.newstudent_header #newstudent_header_close{
+    position:relative;
+    color: darkred;
+    top:10px;
+    left:83%;
+    cursor:pointer;
+    transform: scale(1.2,1.2);
+}
+.newstudent-header #newstudent_close:hover{
+    color: red;
+}
+/** STUDENT PROFILING**/
+.newstudent_content{
+    visibility: visible;
+}
+.newstudent_content h1{
+    text-align: center;
+    color: #444;
+    margin-top: 30px;
+}
+.newstudent_content .components{
+    position: absolute;
+    width:85%;
+    height: 50%;
+    margin-top:18%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    overflow-x: hidden;
+}
+.newstudent_content_lrn{
+    color:#444;
+    width:100%;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 12%;
+}
+#newstudent_content_picture{
+    background: white;
+    background-position: cover;
+    margin-top: 12px;
+    margin-left: -35px;
+    box-shadow: 0px 0px 5px 0px #444;
+}
+#newstudent_content_openfile{
+    position: absolute;
+    width: 250px;
+    margin-top: -20.5%;
+    margin-left: 140px;
+    padding: 5px 10px;
+}
+#content_lrn_div{
+    margin-top: -15%;
+    margin-left: 140px;
+}
+.newstudent_content_lrn input{
+    width:100px;
+    background: #E6E6E6;
+    border: none;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+.newstudent_content_lrn input:focus{
+    border-bottom: 1px solid red;
+}
+.content_name_div{
+    width:60%;
+    margin-top: 20px;
+    margin-left: 140px;  
+    display: flex;
+}
+.content_name_div input{
+    width: 120px;
+    margin-right: 20px;
+}
+#content_student_sur_name{
+    width: 100px;
+}
+#content_student_given_name{
+    width: 140px;
+}
+#content_student_middle_name{
+    width: 120px;
+}
+.content_second_div{
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 140px;
+    display: flex;
+}
+.content_second_div input,select{
+    width: 80px;
+    margin-right: 20px;
+}
+#content_student_grade{
+    background: transparent;
+    font-size: 14px;
+    width: 40px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #444;
+}
+#content_student_sex{
+    background: transparent;
+    font-size: 14px;
+    width: 80px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #444;
+}
+#content_student_religion{
+    background: transparent;
+    font-size: 14px;
+    width: 140px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #444;
+}
+.content_third_div{
+    width: 100%;
+    margin-top: 30px;
+}
+.content_third_div input{
+    margin-right: 20px;
+}
+#content_student_dob{
+    width: 160px;
+}
+#content_student_pob{
+    width: 205px;
+}
+.content_fourth_div{
+    width: 100%;
+    margin-top: 30px;
+}
+.content_fourth_div input{
+    margin-right: 20px;
+}
+#content_student_addr{
+    width: 350px;
+}
+/** END OF STUDENT PROFILING **/
+.Student-footer{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top:87.5%;
+}
+.Student-footer button{
+    background: #3B86FF;
+    color: whitesmoke;
+    width: 136px;
+    height: 36px;
+    margin-left: 20%;
+    border-radius: 2px;
+    font-size: 16px;
+    border:1px solid #3B86FF;
+    cursor:pointer;
+}
+
+.Student-footer button:hover{
+    background: #78ACFF;
+}
+/** END OF STUDENT PROFILING **/
+/** Father Information **/
+.content_father{
+    width: 90%;
+    height: 90%;
+    margin-top: -60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+.content_father h1{
+    color:#444;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.content_father_data{
+    width:80%;
+    height: 35%;
+    margin-top: 7%;
+} 
+.content_father_data .txtbox{
+    width:350px;
+    height: 30px;   
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-30%);
+}
+.txtbox input{
+    background: #E6E6E6;
+    border: none;
+    border-bottom: 1px solid #444; 
+    font-size: 18px;
+    outline: none;
+}
+.txtbox input:focus{
+    border-bottom: 1px solid red;     
+}
+#content_father_name{
+    width: 250px;
+}
+#content_father_occupation{
+    width: 205px;
+}
+#content_father_office{
+    width:250px;
+}
+
+#content_father_contact{
+    width:225px;
+}
+/** End Father Information **/
+/** Mother Names **/
+.content_mother{
+    width: 90%;
+    height: 90%;
+    margin-top: -56%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+.content_mother h1{
+    color:#444;
+    text-align: center;
+    margin-top: -6%;
+}
+
+.content_mother_data{
+    width:80%;
+    height: 35%;
+    margin-top: 7%;
+} 
+.content_mother_data .txtbox{
+    width:350px;
+    height: 30px;   
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-30%);
+}
+.txtbox input{
+    background: #E6E6E6;
+    border: none;
+    border-bottom: 1px solid #444; 
+    font-size: 18px;
+}
+#content_mother_name{
+    width: 250px;
+}
+#content_mother_occupation{
+    width: 205px;
+}
+#content_mother_office{
+    width:250px;
+}
+
+#content_mother_contact{
+    width:225px;
+}
+
+/** End Mother Names **/
+/** Guardian Information **/
+.content_guardian{
+    width: 90%;
+    height: 90%;
+    margin-top: -56.3%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+.content_guardian h1{
+    color:#444;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.content_guardian_data{
+    width:80%;
+    height: 35%;
+    margin-top: 7%;
+} 
+.content_guardian_data .txtbox{
+    width:350px;
+    height: 30px;   
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-30%);
+}
+.txtbox input{
+    background: #E6E6E6;
+    border: none;
+    border-bottom: 1px solid #444; 
+    font-size: 18px;
+}
+#content_guardian_name{
+    width: 250px;
+}
+#content_guardian_occupation{
+    width: 205px;
+}
+#content_guardian_office{
+    width:250px;
+}
+
+#content_guardian_contact{
+    width:225px;
+}
+/** End Guardian Information **/
+/** EMERGENCY **/
+.content_emergency{
+    color:#444;
+    width: 90%;
+    height: 76% ;
+    margin-top: -55.9%;
+    margin-left: 40px;
+    text-align: center;
+    visibility: hidden;
+}
+.content_emergency_div{
+    width:80%;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.content_emergency_div select{
+    background: #E6E6E6;    
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #444;
+    font-size:24px; 
+}
+.info{
+    font-size: 13px;
+    margin-top: -18%;
+}
+/** END EMERGENCY **/
+
+/** ADD GRADE MODULE **/
+
+#grade{
+    position: relative;
+    background: #E6E6E6;
+    width:85%;
+    height: 620px;
+    margin-top: 3%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border:1px solid #3B86FF;
+    box-shadow: 0px 0px 15px 0px #E6E6E6;  
+    overflow:auto;
+    visibility: visible;
+    display: none; 
+    z-index: 20;
+}
+.grade_header{
+    background: #43425D;
+    width: 100%;
+    height: 40px;
+    margin-top:-5px;
+}
+.grade_header #grade_header_close{
+    color: red;
+    font-size: 24px;
+    margin-top: 5px; 
+    margin-left: 97.5%;
+    cursor: pointer;
+}
+.grade-header h3:hover{
+    color: red;
+}
+.grade_content{
+    width:100%;
+    height: 538px;
+}
+.grade_content .grade_content_main{
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    margin-top: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border:1px solid #3B86FF;
+    display: flex;
+}
+.grade_content_main .content_main_left{
+    width:40%;
+    height: 96%;
+    margin-top: 1%;
+    border: none;
+    border-right: 1px solid #3B86FF;
+}
+.content_main_left i{
+    position: absolute;
+    width: 38%;
+    color: #3B86FF;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.content_main_left i input{
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -7px;
+    border: none; 
+    border-bottom: 1px solid #999;
+}
+.content_main_left i input:focus{
+    background: white;
+    border:1px solid #444;
+ }
+.contain_left .main_left_list{
+    position: absolute;
+    width: 38%;
+    height: 92%;
+    margin-top: 3%;
+    margin-left: 1%;
+}
+.main_left_list .main_left_student_record{
+    width: 100%;
+    height: 473px;
+    margin-top:30px ;
+    border:1px solid #3B86FF;
+    border-left: none;
+    border-right: none;
+    overflow-x:scroll;
+}
+.main_left_list .main_left_student_record img{
+    width:55px;
+    height: 55px;
+    margin-top:8px; 
+    margin-left: 10px;
+    border-radius: 100%;
+}
+.main_left_list ul li{
+    position: relative;
+    background: white;
+    color: #444;
+    width:90%;
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 18%;
+    transform: translateX(-14%);
+    box-shadow: 0px 0px 5px 0px #444;
+    display:flex;
+}
+.main_left_list ul li h3{
+    margin-top: 15px;
+    margin-left:11px;
+    cursor: pointer;
+}
+.main_left_list ul li i{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 93.5%;
+}
+.main_left_list ul li span{
+    position: absolute;
+    font-size: 11px;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+.main_left_list ul li i:hover{
+    color: #3B86FF;
+}
+.main_right{
+    width:60%;
+    height: 100%;
+}
+.main_rigth .main_right_register{
+    position: relative;
+    width:145%;
+    height: 100%;
+    margin-top: -109.2%;
+    margin-left: 101%;
+    border:1px solid #3B86FF;
+    visibility: hidden;
+}
+.main_right_register #main_right_header_wmsulogo{
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 20px;  
+}
+.main_right_register .register_header_description{
+    width: 80%;
+    height: 40%;
+    margin-top: -16%;
+    margin-left: 23%;
+}
+.register_header_description h5{
+    font-weight: 300;
+    margin-top: 0%;
+    margin-left: 20%;
+}
+.register_header_description #register_header_department{
+    margin-top: 0%;
+    margin-left: 12%;
+}
+.register_header_description #register_header_city{
+    margin-top: 0%;
+    margin-left: 27%;
+}
+.right_register_profile{
+    width:96%;
+    height: 338px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.right_register_profile .register_profile{
+    margin: 40px 10px;
+}
+.right_register_profile .register_profile #profile_student_name{
+    width: 200px;
+    font-size: 14px;
+    outline: none;
+}
+.right_register_profile .register_profile_select{
+    position: absolute;
+    width: 190px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -13%;
+    margin-left: 69%;
+}
+.register_profile_select select{
+    background: transparent;
+    width: 90px;
+    height: 20px;
+    outline: none;
+    text-align: center;
+}
+table{
+    background:black;
+    margin-top: 1%;
+}
+th{
+    background: white;
+    text-align: center;
+}
+td{
+    background: white;
+    text-align: center;
+}
+.main_right_register #grade_control{
+    position: absolute;
+    width:60%;
+    height: 30px;
+    margin-top: -1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.main_right_register #grade_control button{
+    background: #3B86FF;
+    color:#E6E6E6;
+    font-size: 14px;
+    width: 110px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 5px;
+    outline: none;
+}
+#grade_control #grade_control_saveGrade:hover{
+    background: green;
+}
+#grade_control #grade_control_clearGrade:hover{
+    background: orange;
+    color: #666;
+}
+#grade_addRecord{
+    position: absolute;
+    background: whitesmoke;
+    width: 500px;
+    height: 200px;
+    margin-top: -32%;
+    transform: translateX(-30%);
+    z-index: 11;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px #444;
+    border-radius: 10px;
+    display: none;
+}
+#grade_addRecord h2{
+    color:#3B86FF;
+}
+#grade_addRecord span{
+    color:#444;
+    font-size: 16px;
+    font-weight: bolder;
+}
+#grade_addRecord span input{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+#grade_addRecord button{
+    background: #3B86FF;
+    color: white;
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    outline: none;
+}
+#grade_addRecord #addRecord_addNewRecord:hover{
+    background: green;
+}
+#grade_addRecord #addRecord_cancelNewRecord:hover{
+    background: darkorange;
+}
+.grade_footer{
+    background: #43425D;
+    width: 100%;
+    height: 40px;
+}
+/** END ADD GRADE MODULE **/
+/** STUDENT LIST MODULE **/
+
+#student_list{
+    position: relative;
+    background: #E6E6E6;
+    width:70%;
+    height: 500px;
+    margin-top: 7%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border:1px solid #3B86FF;
+    box-shadow: 0px 0px 15px 0px #E6E6E6;  
+    overflow: hidden;
+    visibility: visible;
+    display: none;
+    z-index: 20;
+}
+.student_list_header{
+    background: #43425D;
+    width: 100%;
+    height: 40px;
+    margin-top:-5px;
+}
+.student_list_header h3{
+    color: red;
+    font-size: 24px;
+    margin-top: 5px; 
+    margin-left: 97.5%;
+    cursor: pointer;
+}
+.student_list_header h3:hover{
+    color: red;
+}
+.student_list_content{
+    width: 100%;
+    height: 418px;
+}
+.student_list_grade{
+    position: absolute;
+    background: whitesmoke;
+    width:97.9%;
+    height: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #444;
+}
+.content_profile_search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    font-size: 15px;
+}
+.content_profile_search h2{
+    width: 400px;
+    color:#3B86FF;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.content_profile_search i {
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 20%;
+    color: #3B86FF;
+}
+.content_profile_search input{
+    background: transparent;
+    width:80%;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: -4%;
+    padding-left: 20px;
+    border:none;
+    border-bottom: 1px solid #444;
+    outline: none;  
+}
+.content_profile-search input:focus{
+    border-bottom: 1px solid #3B86FF;
+}
+.list-content{
+    width: 100%;
+    height:84%;
+}
+.student-list{
+    height: 100%;
+}
+.content_profile_record{
+    width: 98%;
+    height: 86%;
+    margin-left: 1%;
+    overflow: hidden;
+}
+.content_profile_record .profile_record_list{
+    width: 100%;
+    height: 93%;
+    margin:20px auto;
+    overflow: auto;
+    border-top: 1px solid #3B86FF;
+    border-bottom: 1px solid #3B86FF;
+}
+.content_profile_record .profile_record_list li{
+    position: relative;
+    background: white;
+    color: #444;
+    width:48%;
+    height: 80px;
+    float:left;
+    left: 10px;
+    margin:5px 5px;
+    box-shadow: 0px 0px 5px 0px #444;
+}
+.profile_record_list li img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top:10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.profile_record_list li h4{
+    width: 250px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.profile_record_list li #span-lrn{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 100px;
+    margin-top: 0px;
+    margin-left:90px;
+}
+.profile_record_list li #span-grades{
+    position: absolute;
+    color:#444;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration-line: underline;
+    cursor: pointer;
+    top:8%;
+    margin-left:75%;
+}
+.profile_record_list li #span-grades:hover{
+    color:#3B86FF;
+}
+.profile_record_list li i{
+    position: absolute;
+    color: #3B86FF;
+    margin-top: -35px;
+    margin-left: 95%;
+    cursor: pointer;
+}
+.myGrades{
+    position: absolute;
+    background: #E6E6E6;
+    width: 90%;
+    height: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+    box-shadow: 0px 15px 15px 0px #E6E6E6;  
+    overflow: hidden;
+    display:none;
+}
+.myGrades #forms{
+    position: relative;
+    width: 100%;
+    height: 87.1%;
+    top:-2.9%;
+}
+#forms #list-of-forms{
+    width:100%;
+    height: 101%;
+    overflow:auto;
+}
+#forms #list-of-forms #form137{
+    width:800px;
+    height: 1360px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 5px #444;
+    text-align: center;
+    font-size: 20px;
+}
+.forms-control{
+    position: absolute;
+    background: #CCC;
+    width: 300px;
+    height: 100%;
+    top:.3%;
+    left:75%;
+
+    border-left: 1px solid #43425D;
+    z-index: 10;
+}
+.myGrades .forms-footer{
+    background: #43425D;
+    width: 100%;
+    height: 40px;
+    margin-top:-1%;
+}
+.list-footer{
+    background: #43425D;
+    width: 100%;
+    height: 40px;
+}
+/** END STUDENT LIST MODULE **/
+
+/** My Profile **/
+.profile{
+    position: absolute;
+    background: #E6E6E6;
+    width: 70%;
+    height: 80%;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    border:2px solid #43425F;
+    box-shadow: 0px 0px 15px 0px #E8E8E8;
+    display:none;
+    z-index: 20;
+}
+.profile_header{
+    background: #43425D;
+    height: 220px;
+}
+#profile_header_picture{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    border:4px solid #E6E6E6;
+    margin-top: -60px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.profile_header #profile_header_close{
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    top:-12%;
+    margin-left: 97.5%;
+    cursor: pointer;
+}
+.profile_header span:hover{
+    color:red;
+}
+.profile_student_data{
+    color:lightgray;
+    width: 100%;
+    height: 135px;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding:0px 15px;
+    float: left;
+}
+.profile_student_data input{
+    background: transparent;
+    color: #E6E6E6;
+    height: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+#profile_student_lrn{
+    width: 100px;
+}
+#profile_student_name{
+    width: 200px;
+}
+#profile_student_grade{
+    width: 80px;
+}
+#profile_student_sex{
+    width: 100px;
+}
+#profile_student_religion{
+    width: 120px;
+}
+#profile_student_dob{
+    width: 150px;
+}
+#profile_student_pob{
+    width: 185px;
+}
+#profile_student_address{
+    width: 300px;
+}
+#profile_student_emergency{
+    width: 160px;
+}
+#profile-edit{
+    position: absolute;
+    color: #ddd;
+    margin-top: 20px;
+    margin-left: 5%;
+    transform: scale(1.3,1.3);
+}
+.RelatedPerson{
+    color:#43425D;
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+    display: inline-flex; 
+}
+.RelatedPerson .profile_Related_person{
+    border-right: 1px solid #43425D;
+    width: 35%;
+    height: 100%;
+    padding: 0px 15px;
+}
+.RelatedPerson .profile_Related_personn input{
+    background: transparent;
+    color:#43425D;
+    border:none;
+    border-bottom: 1px solid #43425D;
+    font-size: 14px;
+    margin-top: 24px;
+    margin-right: 15px;
+}
+#thirdp{
+    border: none;
+}
+.profile_Related_person h2{
+    margin-left: 50%;
+    transform: translateX(-26%);
+}
+#profile_father_name{
+    width: 200px;
+}
+#profile_father_occupation{
+    width: 160px;
+}
+#profile_father_office{
+    width: 180px;
+}
+#profile_father_contact{
+    width: 160px;
+}
+
+#profile_mother_name{
+    width: 200px;
+}
+#profile_mother_occupation{
+    width: 160px;
+}
+#profile_mother_office{
+    width: 180px;
+}
+#profile_mother_contact{
+    width: 160px;
+}
+
+#profile_guardian_name{
+    width: 200px;
+}
+#profile_guardian_occupation{
+    width: 160px;
+}
+#profile_guardian_office{
+    width: 180px;
+}
+#profile-gcontact{
+    width: 160px;
+}
+.Profile-controls{
+    width:99%;
+    height: 45px;
+    margin-top: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #43425D;
+}
+.Profile-controls button{
+    background: transparent;
+    color: #43425D;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    border:2px solid #43425D;
+    outline: none;
+}
+.Profile-controls button:hover{
+    background: #43425D;
+    color:#E6E6E6;
+}
+.Profile-controls button i{
+    margin-left: 10px;
+    transform: scale(1.2,1.2);
+}
+#profile_edit{
+    margin-left:44%;
+}
+#profile_archive{
+    margin-left: 50px;
+}
+#profile_delete{
+    margin-left: 50px;
+}
+#profile_delete:hover{
+    color: red;
+}
+.profile_modal_overlay{
+    position: fixed;
+    background: rgba(10,10,10,0);
+    width: 100%;
+    height: 100%;
+    transform: translateY(-101.1%);
+    display: none;
+}
+.profile_modal_delete{
+    position: fixed;
+    background: white;
+    color: #444;
+    text-align: center;
+    width: 450px;
+    height: 250px;
+    margin-top: -50%;
+    margin-left: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 3px #444;
+    transform: translate(-50%,30%);
+    display: none;
+}
+#span-teacher-id{
+    font-size: 18px;
+    font-weight: bolder;
+}
+#comment{
+    font-size: 14px;
+    font-weight: 100;
+}
+.profile_modal_delete input{
+    margin-top: 10%;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #444;
+    outline:none;
+    margin-bottom: 10px;
+}
+.profile_odal_delete input:focus{
+    border:1px solid #3B86FF;
+}
+.profile_modal_delete button{
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+#profile_modal_Cancel{
+    font-weight: 200;
+    color: #444;
+    border:none;
+}
+#profile_modal_Continue{
+    color: #E6E6E6;
+    background:rgba(240,0,0,1);
+}
+#profile_modal_Cancel:hover{
+    background:rgba(20,20,20,0.1);
+}
+#profile_modal_Continue:hover{
+    background: darkred;
+}
+/** End of My Profile**/
+
+/** HISTORY **/
+.history{
+    border-left: 1px solid #444;
+    overflow: auto;
+    display: block;
+}
+.history_content{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    margin-left: 87%;
+    transform: translateX(-103%);
+    border-left: 1px solid #444;
+}
+.history_content h3{
+    position: sticky;
+    background: rgba(200,200,200,0.7);
+    color: #43425D;
+    top:5px;
+    margin-top: -10px;
+    text-align: center;
+}
+#history_list{
+    position:absolute;
+    width: 100%;
+    height: 59%;
+    margin-top: 15px;
+    overflow: auto;
+}
+#history_list li{
+    background: rgba(110,110,220,0.5);
+    color:#444;
+    width: 96%;
+    height:80px;
+    margin-top: 5px;
+    margin-left: 50%;
+    margin-bottom: 8px;
+    padding-top: 10px;
+    padding-left: 10px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px black;
+}
+#history_list li #userN{
+    vertical-align: middle; 
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+#history_list li #comment{
+    width: 95%;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+#history_list li #timestamp-detail{
+    font-size: 12px;
+    margin-left: 22px;
+}
+/** End HISTORY **/
+/** FOR RESPONSIVE UI**/
+@media screen and (max-width:650px){
+    #wmsulogo{
+        opacity: 70%;
+        width: 160px;
+        height: 160px;
+        margin-top: 35px;
+        margin-left: 35%;
+        transform: translateX(-50%);
+    }
+    .header_school_data h1{
+        margin-top: 60px;
+        margin-left: -45%;
+        margin-right: 25%;
+        transform: translateX(25%);
+    }
+    .divition{
+        margin-left: -18%;
+    }
+    .header_school_data h3{
+        margin-left: -10%;
+    }
+}
+@media screen and (max-width:2170px){
+    .header .history-content{
+        margin-left: 90.6%;
+    }
+}
+@media screen and (max-width:1800px){
+    .header .history-content{
+        margin-left: 88.7%;
+    }
+}
+@media screen and (max-width:1500px){
+    .header .history-content{
+        margin-left: 86.2%;
+    }
+}
+@media screen and (max-width:1200px){
+    .header .history-content{
+        margin-left: 83.4%;
+    }
+}
+@media screen and (max-width:900px){
+    .header .history-content{
+        margin-left: 81%;
+    }
+}
+@media screen and (max-width:650px){
+    .header .history-content{
+        margin-left: 75%;
+    }
+}
+@media screen and (max-width:450px){
+    .header_school_data h1{
+        margin-top: 60px;
+        margin-left: -55%;
+        margin-right: 120px;
+        transform: translateX(25%);
+    }
+    .divition{
+        margin-left: -25%;
+    }
+    .header_school_data h3{
+        margin-left: -20%;
+        margin-right: 60px;
+    }
+    .header .history-content{
+        width: 250px;
+        margin-left: 67%;
+    }
+}
+
+@media screen and (max-width: 1794px){
+    .header_myAccount nav{
+        margin-left: 83%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1750px){
+    .header_myAccount nav{
+        margin-left: 82%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1655px){
+    .header_myAccount nav{
+        margin-left: 82%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1498px){
+    .header_myAccount nav{
+        margin-left: 81%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1420px){
+    .header_myAccount nav{
+        margin-left: 79%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1286px){
+    .header_myAccount nav{
+        margin-left: 60%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1175px){
+    .header_myAccount nav{
+        margin-left: 75%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1083px){
+    .header_myAccount nav{
+        margin-left: 60%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:1003px){
+    .header_myAccount nav{
+        margin-left: 71%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:935px){
+    .header_myAccount nav{
+        margin-left: 70%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:905px){
+    .header_myAccount nav{
+        margin-left: 68%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:850px){
+    .header_myAccount nav{
+        margin-left: 65%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:780px){
+    .header_myAccount nav{
+        margin-left: 62%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:737px){
+    .header_myAccount nav{
+        margin-left: 60%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:682px){
+    .header_myAccount nav{
+        margin-left: 57%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:637px){
+    .header_myAccount nav{
+        margin-left: 55%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:607px){
+    .header_myAccount nav{
+        margin-left: 53%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:590px){
+    .header_myAccount nav{
+        margin-left: 50%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:550px){
+    .header_myAccount nav{
+        margin-left: 48%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:530px){
+    .header_myAccount nav{
+        margin-left: 44%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:492px){
+    .header_myAccount nav{
+        margin-left: 42%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:475px){
+    .header_myAccount nav{
+        margin-left: 32%;
+        transform: translateX(-50%);
+     }
+}
+@media screen and (max-width:408px){
+    .header_myAccount nav{
+        margin-left: 25%;
+        transform: translateX(-50%);
+     }
+}

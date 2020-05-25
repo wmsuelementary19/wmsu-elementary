@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge<title>DashBoard"/> 
+        <title>WMSU Elementary Hompage</title>
+        <script defer src="Dashboard.js"></script>
+        <link rel="stylesheet" type="text/css" href="fontawesome-free-5.12.0-web\css\all.css">
+        <link rel="stylesheet" type="text/css" href="Homepage.css">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+</head>
+    <body onload="setUser()">
+        <div class="wrapper">
+            <div class="sidebar">
+                <img src="wissen.png" width=190 height=100 id="company-logo">
+                <div class="sidebar-line"></div>
+                <ul>
+                    <li id="NewUser"><a><i class="fas fa-user"></i>New User</a></li>
+                    <li id="Subject" ><a><i class="fas fa-book"></i>Subject</a></li>
+                    <li id="StudentList"><a><i class="fas fa-users"></i>Student List</a></li>
+                    <li id="Alumni"><a><i class="fas fa-graduation-cap"></i>Alumni</a></li>
+                    <li id="notification-record"><a><i class="fas fa-bell"></i>Notification</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="header"> 
+                <div class="header_myAccount">
+                    <nav class="header_myAccount_nav">
+                        <ul>
+                            <li id="header_account_data">Undefined</li>
+                        </ul>
+                    </nav>
+                    <img src="profile/avatar-icon.png" id='header_user_pict'>
+                </div>
+    
+                <img src="wmsu.png" width=120px height=120px id='header_wmsulogo'>
+    
+                <div class="header_school_data">
+                    <h1>Western Mindanao State University</h1>
+                    <div class="header_design_line"></div>
+                    <i><h3>Un Universidad, Un Familia, Un Amor</h3></i>
+                </div>
+                <div class="header_bar_design">
+                    <h2>OVERVIEW</h2>
+                </div>
+
+                <dashboardreport class='dashboard_report'>
+                    <header class='dashboard_report_header'>
+                        <!-- header report only. Main body will hold the line graph report of number of student graduates by batch -->
+                        <div>
+                            <h3>
+                                Statistical Report
+                            </h3>
+                        </div>
+                        <reportbody class='ReportBody'>
+                            <div id='curve_chart' style='width:900px; height:400px'></div>
+                        </reportbody>
+                    </header>
+                </dashboardreport>
+
+                <div class="history">
+                    <div class="history_content">
+                        <h3>TIMELINE</h3>
+                        <ul id="history_list">
+                            <!-- Update Records !-->
+                            <!-- New Records been added !-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+         <div class="Overlay"></div>
+         <userModule id='userModule'>
+            <header id='userModule_header'><h2 id='userModule_header_close'>&times;</h2></header>
+
+            <leftBody id='userModule_leftBody'>
+                <leftbodyheader id='leftBody_header'> 
+                    <input type = 'search' placeholder='Search ...' id='search_user_data'>
+                    <button id='userModule_search_user'><i class="fas fa-search"></i></button>
+
+                    <span>User Type:</span>
+                    <select id='search_by_user_type'>
+                        <option>NONE</option>
+                        <option>ADMIN</option>
+                        <option>TEACHER</option>
+                    </select>
+                </leftbodyheader>
+
+                <leftbodymain id='leftBody_Main' >
+                    <table id='leftBody_Main_UserRecords' class='table_userRecords'>
+                        <tr><th width="320">NAME</th><th width="180" colspan="3">USER TYPE</th></tr>
+                        <!-- Display list of user here  -->
+                        </table>
+                </leftbodymain>
+            </leftBody>
+            <rightBody id='userModule_rightBody'>
+                <rightbodyheader id='rightBody_header'><h2>REGISTER USER</h2></rightbodyheader>
+                <rightbodymain id='rightBody_Main'>
+                    <img src='profile/avatar-icon.png' id='user_profile_picture'>
+                    <div>
+                        <input type='file' id='select_profile_picture'>
+                    </div>
+                    <div id='userModule_userID'>
+                        <span>User ID :</span><input type="text" maxlength="20" id='userModule_input_userID'>
+                    </div>
+                    <div>
+                        <span>Full Name :</span><input type="text" maxlength="40" id='userModule_input_name'>
+                    </div>
+                    <div>
+                        <span>User Type:</span>
+                        <select id='userModule_select_userType'>
+                            <option>ADMIN</option>
+                            <option>TEACHER</option>
+                        </select>
+                        <span>Section:</span><input maxlength='30' id='userModule_input_section'>
+                    </div>
+                    <div>
+                        <span>Email :</span><input type="text" maxlength="40" id='userModule_input_email'>
+                    </div>
+                    <div>
+                        <span>Password :</span><input type="password" maxlength="40"id='userModule_input_password'>
+                    </div>
+                </rightbodymain>
+                <rightbodycontrol id='rightBody_control'>
+                    <button id='userModule_Cancel_button'>CANCEL</button>
+                    <button id='userModule_Save_button'>SAVE</button>
+                </rightbodycontrol>
+            </rightBody>
+         </userModule>  
+
+
+        	<div class="subject-Container">
+        		<div class="subject-header">
+        			<h3 id="close-subject">&times;</h3>
+        		</div>
+        		<div class="subject-content">
+        				<div class="list-subject">
+                            <div class="list-title">
+                                <h2>SUBJECTS</h2>
+                            </div>
+        					<ul class="list-of-subject" id='list_of_subject'>
+                                <!--- Subject List Here!-->
+        					</ul>
+        				</div>
+                        <div class="add-subject">
+                            	<h2>New Subject</h2>
+                            	<h4>Subject ID :<input type="text" name="sub-id" id="subject-ID"></h4>
+                            	<h4>Subject Name :<input type="text" name="sub-name" id="sub-name"></h4>
+                            	<h4>Subject Description :<input type="text" name="sub-desc" id="sub-desc"></h4>
+                                <h4>Grade Level : 
+                                	<select id="subjectGradeLevel">
+                                		<option>1</option>
+                                		<option>2</option>
+                                		<option>3</option>
+                                		<option>4</option>
+                                		<option>5</option>
+                                		<option>6</option>
+                                	</select>
+                            	</h4>
+                            	<button id="save">Save</button>
+                            	<button id="clear">Clear</button>
+                        </div>
+        		</div>
+        		<div class="subject-footer"> </div>
+            </div>
+            
+            <div id="student_list">
+                <div class="student_list_header">
+                    <h3 id="student_list_close">&times;</h3>
+                </div>
+                <div class="student_list_content">
+                    <div class="student_list_grade">
+                        <div class="content_profile_search">
+                            <h2>STUDENT LIST</h2>
+                            <input type="search" id="profile_search_data" placeholder="Search .."> <button id='search_button'><i class="fas fa-search"></i></button> 
+                            <span>Section:</span>
+                            <select id='search_student_list_section'>
+                                <option>Del pilar</option>
+                                <option>Saturn</option>
+                                <option>Jade</option>
+                            </select>
+                        </div>
+                        <div class="content_profile_record">
+                            <ul class="profile_record_list">
+                                <!-- Display list of Registered Student!-->
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="list-footer"> </div>
+            </div>
+
+            <div class='profile'>
+                    <div class="profile_header">
+                        <img src="profile\avatar-icon.png" id="profile_header_picture"><span id='profile_header_close'>&times;</span>
+                        <div class='profile_student_data'>
+                            LRN : <input type="text"id='profile_student_lrn' disabled>
+                            Name : <input type="text" id='profile_student_name' disabled>
+                            Grade : <input type="text" id='profile_student_grade' disabled>
+                            Sex : <input type="text" id='profile_student_sex' disabled>
+                            Religion : <input type="text" id='profile_student_religion' disabled>
+                            Date of Birth : <input type="text" id='profile_student_dob' disabled>
+                            Place of Birth : <input type="text" id='profile_student_pob' disabled>
+                            Address : <input type="text" id='profile_student_address' disabled>
+                            Contact Incase of Emergency : <input type="text" id='profile_student_emergency' disabled>
+                        </div>
+                    </div>
+                    <div class='RelatedPerson'>
+                        <div class='profile_Related_person'>
+                            <h2>Father</h2>
+                            Name : <input type="text" id='profile_father_name' disabled>
+                            Occupation : <input type="text" id='profile_father_occupation' disabled>
+                            Office : <input type="text" id='profile_father_office' disabled>
+                            Contact # : <input type="text" id='profile_father_contact' disabled>
+                        </div>
+                        <div class='profile_Related_person'>
+                            <h2>Mother</h2>
+                            Name : <input type="text" id='profile_mother_name' disabled>
+                            Occupation : <input type="text" id='profile_mother_occupation' disabled>
+                            Office : <input type="text" id='profile_mother_office' disabled>
+                            Contact # : <input type="text" id='profile_mother_contact' disabled>
+                        </div>
+                        <div class='profile_Related_person' id="thirdp">
+                            <h2>Guardian</h2>
+                            Name : <input type="text" id='profile_guardian_name' disabled>
+                            Occupation : <input type="text" id='profile_guardian_occupation' disabled>
+                            Office : <input type="text" id='profile_guardian_office' disabled>
+                            Contact # : <input type="text" id='profile_guardian_contact' disabled>
+                        </div>
+                    </div>
+                    <div class="Profile-controls">
+                        <button id='profile_edit'>Edit<i class='fas fa-edit'></i></button>
+                        <button id='profile_archive'>Archive</button>
+                        <button id='profile_delete'>Delete</button>
+                    </div>
+    
+                    <div class="profile_modal_overlay"> </div>
+                    <div class='profile_modal_delete'> 
+                        <h2>DELETE PROFILE</h2>
+                        <span id='span-teacher-id'>Teacher ID:</span> <input type="text" name="teacher-id" id='teacher-id'><br>
+                        <span id='comment'>ID is required in order to delete this profile.</span><br>
+                        <button id='profile_modal_Cancel'>Cancel</button>
+                        <button id='profile_modal_Continue'>Delete</button>
+                    </div>
+                </div>
+            <forms class='student_list_forms'>
+                <!-- display data of students here -->
+            </forms>
+        	<div class="alumni-Container">
+        		<div class="alumni-header">
+        			<h3 id="close-alumni">&times;</h3>
+        		</div>
+        		<div class="alumni-content">
+                    <div class="alum-header">
+                        <h2>ALUMNI</h2>
+                        <input type="text" placeholder="Search .."><button id='search_alumni_batch'><i class="fas fa-search"></i></button>
+                        <span>Batch:</span>
+                        <select id='search_by_year'>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                        </select>
+                    </div>
+
+                        <div class="records">
+                            <ul class="list-of-alumnis">
+                            	<!-- Display list of Alumnis here!-->
+                            </ul>
+                        </div>
+        		</div>
+        		<div class="alumni-footer"> </div>
+        	</div>
+<!-- 
+            <div class="grade-Container">
+
+            </div> -->
+        	<div class="notification-Container">
+        		<div class="notification-header">
+        			<h3 id="close-notification">&times;</h3>
+        		</div>
+        		<div class="notification-content">
+                        <div class="list-notification">
+                            <div class="list-title-notif">
+                                <h2>NOTIFICATION</h2>
+                            </div>
+                            <ul class="list-of-request">
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                                <li>
+                                    <h3>REQUESTING STUDENT GRADE</h3>
+                                    <i class="far fa-check-square" id="check"></i>
+                                    <button id="pending">PENDING</button>
+                                    <i class="fas fa-times-circle" id="X-circle"></i>
+                                    <i class="fas fa-trash-alt" id="trash"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+        		</div>
+        		<div class="notification-footer"> </div>
+        	</div>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDPEhPuWruY7iNoDNofheZ_r2tr7sVMOxc",
+            authDomain: "wmsuelementarysite.firebaseapp.com",
+            databaseURL: "https://wmsuelementarysite.firebaseio.com",
+            projectId: "wmsuelementarysite",
+            storageBucket: "wmsuelementarysite.appspot.com",
+            messagingSenderId: "54916200539",
+            appId: "1:54916200539:web:acd760e922934244a4277e"
+        };
+         // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
